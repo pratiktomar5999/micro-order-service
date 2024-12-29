@@ -3,8 +3,6 @@ package com.micro.order_service.config;
 import java.time.Duration;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.http.client.ClientHttpRequestFactorySettings;
-import org.springframework.boot.web.client.ClientHttpRequestFactories;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestFactory;

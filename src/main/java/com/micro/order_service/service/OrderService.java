@@ -29,7 +29,9 @@ public class OrderService {
 
             orderRepo.save(order);
 
-            OrderEvent oe = new OrderEvent(order.getOrderNumber(), order.getEmail());
+            OrderEvent oe = new OrderEvent();
+            oe.setEmail(order.getEmail());
+            oe.setOrderNumber(order.getOrderNumber());
             kafkaTemplate.send("order-placed",oe);
             log.info("Message sent - " + oe.toString());
         }else{
